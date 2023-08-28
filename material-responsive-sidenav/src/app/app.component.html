@@ -4,8 +4,8 @@
   </button>
   <h1>Responsive Material Sidenavigation</h1>
 </mat-toolbar>
-<mat-sidenav-container autosize>
-  <mat-sidenav>
+<mat-sidenav-container autosize="true">
+  <mat-sidenav [ngClass]="!isCollapsed ? 'expanded' : ''">
     <mat-nav-list>
       <a mat-list-item>
         <span class="entry">
