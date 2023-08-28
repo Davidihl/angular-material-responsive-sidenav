@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button aria-label="Menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>Responsive Material Sidenavigation</h1>
+</mat-toolbar>
+<mat-sidenav-container autosize>
+  <mat-sidenav [opened]="true" mode="side">
+    <mat-nav-list>
+      <a mat-list-item>
+        <span class="entry">
+          <mat-icon>house</mat-icon>
+          <span>Dashboard</span>
+        </span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <h2>Content</h2>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
