@@ -1,0 +1,2 @@
+# angular-material-responsive-sidenav
+This repository was created as part of this tutorial [https://github.com/Davidihl/angular-material-responsive-sidenav/tree/main/material-responsive-sidenav](https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l)https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l
