@@ -15,21 +15,17 @@ export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
   isMobile= true;
-  isCollapsed = false;
+  isCollapsed = true;
 
 
   constructor(private observer: BreakpointObserver) {}
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((screenSize) => {
       if(screenSize.matches){
         this.isMobile = true;
-        this.sidenav.mode = "over";
-        this.isCollapsed = false; // the menu should never be collapsed on mobile
       } else {
         this.isMobile = false;
-        this.sidenav.mode = "side";
-        this.sidenav.open(); // the menu should never be closed on desktop/tablet
       }
     });
   }
@@ -37,7 +33,9 @@ export class AppComponent {
   toggleMenu() {
     if(this.isMobile){
       this.sidenav.toggle();
+      this.isCollapsed = false;
     } else {
+      this.sidenav.open();
       this.isCollapsed = !this.isCollapsed;
     }
   }
