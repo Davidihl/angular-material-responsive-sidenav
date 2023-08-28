@@ -1,16 +1,16 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button aria-label="Menu icon">
+  <button mat-icon-button aria-label="Menu icon" (click)="toggleMenu()">
     <mat-icon>menu</mat-icon>
   </button>
   <h1>Responsive Material Sidenavigation</h1>
 </mat-toolbar>
 <mat-sidenav-container autosize>
-  <mat-sidenav [opened]="true" mode="side">
+  <mat-sidenav>
     <mat-nav-list>
       <a mat-list-item>
         <span class="entry">
           <mat-icon>house</mat-icon>
-          <span>Dashboard</span>
+          <span *ngIf="!isCollapsed">Dashboard</span>
         </span>
       </a>
     </mat-nav-list>
